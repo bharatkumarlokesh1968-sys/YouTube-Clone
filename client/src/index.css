@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  body {
+    @apply bg-yt-dark text-yt-text font-sans;
+    font-family: 'Roboto', Arial, sans-serif;
+    scrollbar-width: thin;
+    scrollbar-color: #555 #1f1f1f;
+  }
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: #1f1f1f; }
+  ::-webkit-scrollbar-thumb { background: #555; border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: #888; }
+}
+
+@layer components {
+  .btn-red {
+    @apply bg-yt-red text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-red-700 transition-colors duration-200;
+  }
+  .btn-ghost {
+    @apply bg-yt-surface text-yt-text px-4 py-2 rounded-full text-sm font-medium hover:bg-yt-hover transition-colors duration-200;
+  }
+  .chip {
+    @apply px-3 py-1 rounded-full text-sm font-medium bg-yt-surface hover:bg-yt-hover cursor-pointer transition-colors duration-150 whitespace-nowrap;
+  }
+  .chip-active {
+    @apply px-3 py-1 rounded-full text-sm font-medium bg-yt-text text-yt-dark cursor-pointer whitespace-nowrap;
+  }
+  .sidebar-item {
+    @apply flex items-center gap-5 px-3 py-2 rounded-xl hover:bg-yt-hover cursor-pointer transition-colors duration-150 text-sm;
+  }
+  .sidebar-item-active {
+    @apply flex items-center gap-5 px-3 py-2 rounded-xl bg-yt-hover cursor-pointer transition-colors duration-150 text-sm font-medium;
+  }
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.animate-fade-up { animation: fadeUp 0.3s ease forwards; }
+.animate-fade-in { animation: fadeIn 0.2s ease forwards; }
+
+/* Video grid stagger */
+.video-grid > *:nth-child(1) { animation-delay: 0ms; }
+.video-grid > *:nth-child(2) { animation-delay: 50ms; }
+.video-grid > *:nth-child(3) { animation-delay: 100ms; }
+.video-grid > *:nth-child(4) { animation-delay: 150ms; }
+.video-grid > *:nth-child(5) { animation-delay: 200ms; }
+.video-grid > *:nth-child(6) { animation-delay: 250ms; }
