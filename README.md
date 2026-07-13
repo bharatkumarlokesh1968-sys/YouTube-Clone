@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🎬 YourTube — Full-Stack YouTube Clone
 
 A production-ready YouTube clone built with **React + Vite**, **Node.js/Express**, and **MongoDB**.
@@ -246,3 +247,7 @@ Change `PORT` in `.env` (server) or the port in `vite.config.js` (client).
 
 **Upload not working:**  
 The `server/uploads/` directory is created automatically on first upload.
+=======
+# YouTube-Clone
+2000
+>>>>>>> 3fc31f48dbbb4256bdb5a555fd18dbfcf2f9540d
